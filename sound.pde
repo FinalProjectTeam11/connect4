@@ -1,5 +1,9 @@
 import processing.sound.*;
 SoundFile bg_music; //import sound file and use for background music
+SoundFile drop_chip;
+SoundFile connect4;
+SoundFile winner;
+SoundFile loser;
 
 // void setup
 
