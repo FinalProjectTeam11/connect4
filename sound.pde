@@ -23,11 +23,11 @@ boolean stop_bg = true;
 bg_music = new SoundFile(this, "backgroundmusic.mp3"); //play and loop sound file 
   bg_music.loop();
 
-/*
+/////
 void mousePressed() {
   stop_bg = False;
   if (stop_bg == False) {
     bg_music.stop();
   }  
-} */
+} /////
   
