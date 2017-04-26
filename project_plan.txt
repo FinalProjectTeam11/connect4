@@ -1,0 +1,8 @@
+keyboard - player name, high score, movement of chips using keys  
+main menu - screen that includes buttons and display info such as score
+multiple class objects 
+ --sound
+ --chip
+data input will include unique textures on chips to distinguish between the two colors, high scores (text file updates)
+sound -- (win, lose, drop chip, connect 4 chips) will have class for sound, where boolean value will indicate sound: (did the player win/lose, clink for dropping chips, etc)
+      -- google open source sound libraries to find sound files 
