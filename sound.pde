@@ -1,9 +1,20 @@
 import processing.sound.*;
-SoundFile bg_music; //import sound file and use for background music
+
+//import sound file and use for background music
+//background music starts with game and player can choose to turn it off
+SoundFile bg_music; 
+
 SoundFile drop_chip;
 SoundFile connect4;
 SoundFile winner;
 SoundFile loser;
+
+// initialize booleans so sound plays when any of them are true
+
+boolean connect 4 = false; 
+boolean drop_chip = false; 
+boolean win = false;
+boolean lost = false;
 
 // void setup
 
