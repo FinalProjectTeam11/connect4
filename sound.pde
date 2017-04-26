@@ -16,12 +16,18 @@ boolean drop_chip = false;
 boolean win = false;
 boolean lost = false;
 
+boolean stop_bg = true;
+
 // void setup
 
 bg_music = new SoundFile(this, "backgroundmusic.mp3"); //play and loop sound file 
   bg_music.loop();
-  
+
+/*
 void mousePressed() {
-  bg_music.stop();
+  stop_bg = False;
+  if (stop_bg == False) {
+    bg_music.stop();
   }  
+} */
   
