@@ -1,5 +1,5 @@
 import processing.sound.*;
-SoundFile bg_music; #import sound file and use for background music
+SoundFile bg_music; //import sound file and use for background music
 
 // void setup
 
