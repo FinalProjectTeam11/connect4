@@ -11,7 +11,7 @@ class Mouse extends GameRunner{
     }
   }
   
-  public void overColumn(float bounce){
+  public int overColumn(float bounce){
     if (mouseX > 250 && mouseX < 950 && mouseY < 700 && mouseY > 50){
       for (int i = 0; i < column_length; i++){
         if (mouseX > 250 + (i*100) && mouseX < 250 + ((i+1)*100)){
@@ -22,11 +22,11 @@ class Mouse extends GameRunner{
         
           //square
           rect(250 + (i * 100) + 25, 20 + bounce, 50, 40);
+          
+          return i;
         }
       }
     }
-  }
-  
-  void mousePressed(){
+    return 10;
   }
 }
