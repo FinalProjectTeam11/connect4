@@ -18,28 +18,29 @@ color red = #FF0303;
 color black = #080808;
 
 void setup(){
-  size(1200, 800);
-  runner = new GameRunner();
+  column_length = 7;
+  row_length = 6;
   mouse = new Mouse();
+  runner = new GameRunner(column_length, row_length); //<>//
+  size(1200, 800);
+  
+  
   gameStatus = false;
   
   boardWidth = 700;
   boardHeight = 600;
-  column_length = 7;
-  row_length = 6;
-  boardX = width - boardWidth - ((width - boardWidth)/2);
-  boardY = height - boardHeight - ((height - boardHeight)/2) + 50;
+  boardX = width - boardWidth - ((width - boardWidth)/2); //<>//
+  boardY = height - boardHeight - ((height - boardHeight)/2) + 50; //<>//
   
   gridLength = 100;
   bounceLimit = 50;
   
   starter = false;
-  runner.drop(0, 'r'); //<>//
 }
 
 void draw(){
   //displays board
-  background(230);
+  background(230); //<>//
   fill(#4215FF);
   rect(boardX, boardY, boardWidth, boardHeight);
   for (int i = 0; i < column_length; i++){
@@ -59,13 +60,31 @@ void draw(){
     plusMinus = plusMinus * -1;
   }
   bounce = bounce + (plusMinus * 2);
-  currentColumn = mouse.overColumn(bounce);
+  mouse.overColumn(bounce);
+  
+  //check winner
+  gameStatus = runner.checkBoard();
+  gameStatus = runner.checkEnd();
+  String winner = runner.checkWinner();
+  //checks status of winner and game
+  //if (gameStatus && (winner.equals("RED") || winner.equals("BLACK"))){
+  //  System.out.println("THE WINNER IS " + winner);
+  //}
+  //else if (gameStatus && winner.equals("")){
+  //  System.out.println("THE GAME IS TIED");
+  //}
 }
 
 void mouseClicked(){
-  currentColumn = mouse.overColumn(bounce);
-  if (!starter)
-    runner.drop(currentColumn, 'r');
-  else
-    runner.drop(currentColumn, 'b');
+  currentColumn = mouse.columnNumber();
+  if (currentColumn >= 0 && currentColumn <= 6 && runner.gravityCount[currentColumn] < row_length){
+    if (!starter && runner.gravityCount[currentColumn] < row_length){
+      runner.drop(currentColumn, 'r');
+      starter = !starter;
+    }
+    else if (starter && runner.gravityCount[currentColumn] < row_length){
+      runner.drop(currentColumn, 'b');
+      starter = !starter;
+    }
+  }
 }
