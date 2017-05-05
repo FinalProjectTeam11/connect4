@@ -1,1 +1,14 @@
+Saira (Data input and sound implementation):
 
+To apply an aesthetic feature for the chips, I searched on google for textured, colored images. Since our chips are black and red, I found moderate resolution images of red and black color that had a nice design. Then, using photoeditor, I cropped and resized the images so that they were smaller. The resolution wouldn't have had much effect on the output, so I just used textured images that I found and edited the color as well so that when the images inputted into the game, they would work seamlessly with the chips. The final product shows the chips with a nice design, instead of being plain colors. 
+
+For sound, I searched the web for appropriate sound files that could be implemented as the background music, winner and tie sounds, and the chip dropping sound. After finding these files and chopping some in an audio editor, I uploaded them to the data folder and the program incorporates these sounds at the respective action; for example, when a player drops a chip or wins, a certain sound is heard. The background music is mutable using the 'a' and 's' keys, for accessibility. 
+
+Peter (Animation hierarchies, keyboard input):
+
+
+Marco (GUI):
+
+
+
+Challenges: 
