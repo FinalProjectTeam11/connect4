@@ -4,7 +4,12 @@ To apply an aesthetic feature for the chips, I searched on google for textured, 
 
 For sound, I searched the web for appropriate sound files that could be implemented as the background music, winner and tie sounds, and the chip dropping sound. After finding these files and chopping some in an audio editor, I uploaded them to the data folder and the program incorporates these sounds at the respective action; for example, when a player drops a chip or wins, a certain sound is heard. The background music is mutable using the 'a' and 's' keys, for accessibility. 
 
-Peter (Animation hierarchies, keyboard input):
+Peter (Game Mechanics, Animation hierarchies, keyboard input):
+I created the Game mechanics, displaying the board, and animation. The GameRunner class handled all the game mechanics. I used a 2d character array to represent the board to keep track of whose piece is in which spot. An int array allowed me to keep track of how far the pieces fall to the bottom in each column. Then everytime a player makes a move, the 2d array would update to it's corrected and corrected board, then would display in the draw function. A method would check to see who wins every time the draw function runs. Since the 2d array starts from the top left, I would only have to check "east", "southeast", "south", and "southwest" directions, while making sure I don't go over the array lengths. Then another method will check which winner, or if they ran out of turns, thus a tie. 
+
+The animation hiearchy was represented by the piece the player is "holding". The method in the mouse class displayed the correct color of the connect four piece and would float over the mouse. Another method calculated which column the mouse is over, and would display an arrow bouncing according to where the mouse is. Another method is used to return which column number the mouse is hovering over, so that the GameRunner class can update the 2d array correctly. 
+
+The Keyboard input makes sure that sound comes through when 'a' is pressed during the game and stops when 's' is pressed. The game will also record the names of the players by having them write in their names in the text field when the game starts. Also the mouseclicks will use methods from the mouse class. 
 
 
 Marco (GUI):
