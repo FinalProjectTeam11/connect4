@@ -8,6 +8,9 @@ Peter (Animation hierarchies, keyboard input):
 
 
 Marco (GUI):
+The main menu and general interactivity provided by me. The main menu was kept as simple as possible for a connect 4 game. It provides necessary information  such as credits and instruction. The play button is also straight forward. A player must click play and enter games and this person can start playing inmediately. This is a ad free and minimalist approach for a simple and enjoyable game. I had to decide how to do the menu: either using everything from a library or using the built in functions from processing. I ended up using both. The first menu buttons use default p-shapes but their clicking and their shading is based whether the mouse is within the area of the button and the mouse has been clicked. This proved to be rather tedious, so I chose a library to do the remianing options. The difficult part about using the library is familiarizing oneself to it and ask the right questions in order to find the right functionality desired. A wrong question led me to waste hours trying to find a solution for such question. Keyboard input is done at the name entry and mutable sound.
+
+I was also in charge making sure of putting all the parts together (ingame and menu) and make sure everything is in the respective spot. I learned to love booleans, and I have never dealt with so many boolean variables. This is pretty chaotic and required me to keep calm at the blocks of code in front of me, despite everything looking organized. Then i made sure my fonts, colors, text and shape size were in accordance with the whole project.
 
 
 
